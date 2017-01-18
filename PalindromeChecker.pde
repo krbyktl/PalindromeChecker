@@ -30,7 +30,29 @@ public String reverse(String str)
     String sNew = new String();
     for(int i = str.length()-1; i >= 0; i--)
     {
-      sNew = sNew + str.substring(i, i+1);
+        sNew = sNew + str.substring(i, i+1).toLowerCase();
     }
     return sNew;
+}
+public String noSpaces(String atr)
+{
+  String aNew = new String();
+  for(int i = 0; i < atr.length(); i++)
+  {
+    if(atr.substring(i, i+1).equals(" ") == false)
+    {
+      aNew = aNew + atr.substring(i, i+1);
+    }
+  }
+  return aNew;
+}
+public String noCapitals(String btr)
+{
+  String bNew = new String();
+  bNew = btr.toLowerCase();
+  return bNew;
+}
+public String allLetters(String ctr)
+{
+  
 }
