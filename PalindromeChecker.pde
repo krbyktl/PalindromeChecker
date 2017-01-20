@@ -16,11 +16,10 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  String reversal = reverse(word);
-  String a = noSpaces(reversal);
-  String b = noCapitals(a);
-  String c = allLetters(b);
-  if(word.equals(c))
+  String a = noSpaces(word);
+  a = noCapitals(a);
+  a = allLetters(a);
+  if(a.equals(reverse(a)))
   {
     return true;
   }
@@ -52,16 +51,14 @@ public String noSpaces(String atr)
 }
 public String noCapitals(String btr)
 {
-  String bNew = new String();
-  bNew = btr.toLowerCase();
-  return bNew;
+  return btr.toLowerCase();
 }
 public String allLetters(String ctr)
 {
   String cNew = new String ();
   for(int j = 0; j < ctr.length(); j++)
   {
-     if(Character.isLetter(ctr.charAt(j)) == true)
+     if(Character.isLetter(ctr.charAt(j)))
      {
        cNew = cNew + ctr.substring(j, j+1);
      }
